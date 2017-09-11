@@ -58,30 +58,28 @@ function managerAction() {
 
             function viewProducts() {
                 var query = "SELECT * FROM products";
-                connection.query(query, {
-                    artist: answer.artist
-                }, function(err, res) {
-                    if (err) throw err;
-                    for (var i = 0; i < res.length; i++) {
-                        console.log("ID: " + res[i].item_id + " || Product: " + res[i].product_name + " || Department: " + res[i].department_name + " || Price: " + res[i].price + " || Quantity: " + res[i].stock_quantity);
-                    }
-                    console.log("---------------------------------------------")
-                    managerAction();
-                });
+                connection.query(query,
+                    function(err, res) {
+                        if (err) throw err;
+                        for (var i = 0; i < res.length; i++) {
+                            console.log("ID: " + res[i].item_id + " || Product: " + res[i].product_name + " || Department: " + res[i].department_name + " || Price: " + res[i].price + " || Quantity: " + res[i].stock_quantity);
+                        }
+                        console.log("---------------------------------------------")
+                        managerAction();
+                    });
             }
 
             function viewLow() {
                 var query = "SELECT * FROM products WHERE (stock_quantity < 5)";
-                connection.query(query, {
-                    artist: answer.artist
-                }, function(err, res) {
-                    if (err) throw err;
-                    for (var i = 0; i < res.length; i++) {
-                        console.log("ID: " + res[i].item_id + " || Product: " + res[i].product_name + " || Department: " + res[i].department_name + " || Price: " + res[i].price + " || Quantity: " + res[i].stock_quantity);
-                    }
-                    console.log("---------------------------------------------")
-                    managerAction();
-                });
+                connection.query(query,
+                    function(err, res) {
+                        if (err) throw err;
+                        for (var i = 0; i < res.length; i++) {
+                            console.log("ID: " + res[i].item_id + " || Product: " + res[i].product_name + " || Department: " + res[i].department_name + " || Price: " + res[i].price + " || Quantity: " + res[i].stock_quantity);
+                        }
+                        console.log("---------------------------------------------")
+                        managerAction();
+                    });
             }
 
             function addStock() {
@@ -164,6 +162,15 @@ function managerAction() {
             }
 
             function addNew() {
+                var deptNames = [];
+                //grab name of departments
+                connection.query('SELECT * FROM departments', function(err, res) {
+                    if (err) throw err;
+                    for (var i = 0; i < res.length; i++) {
+                        deptNames.push(res[i].department_name);
+                    }
+                })
+
                 // ask questions to get the values for the new product
                 inquirer
                     .prompt([{
@@ -173,25 +180,32 @@ function managerAction() {
                         },
                         {
                             name: "deparmentName",
-                            type: "input",
-                            message: "What department would you like to place your new product in?"
+                            type: "list",
+                            message: "What department would you like to place your new product in?",
+                            choices: deptNames
                         },
                         {
                             name: "setPrice",
                             type: "input",
                             message: "What is the pricing of the new product?",
-                            validate: function(value){
-                              if(isNaN(value) == false){return true;}
-                              else{return false;}
-                            }                            
+                            validate: function(value) {
+                                if (isNaN(value) == false) {
+                                    return true;
+                                } else {
+                                    return false;
+                                }
+                            }
                         },
                         {
                             name: "setQuantity",
                             type: "input",
                             message: "How many units of the new product will you add?",
-                            validate: function(value){
-                              if(isNaN(value) == false){return true;}
-                              else{return false;}
+                            validate: function(value) {
+                                if (isNaN(value) == false) {
+                                    return true;
+                                } else {
+                                    return false;
+                                }
                             }
                         }
                     ])

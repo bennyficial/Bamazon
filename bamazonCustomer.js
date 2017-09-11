@@ -22,7 +22,13 @@ function start() {
         .prompt([{
             name: "itemID",
             type: "input",
-            message: "What is the ID of the product you would like to buy?"
+            message: "What is the ID of the product you would like to buy?",
+            validate: function(value) {
+                if (isNaN(value) === false) {
+                    return true;
+                }
+                return false;
+            }
         }, {
             name: "itemQuantity",
             type: "input",
@@ -35,8 +41,8 @@ function start() {
             }
         }])
         .then(function(answer) {
-            var requestedID = answer.itemID;
-            var requestedQuantity = answer.itemQuantity
+            var requestedID = parseInt(answer.itemID);
+            var requestedQuantity = parseInt(answer.itemQuantity);
             // console.log("Requested item ID:" + requestedID);
             // console.log("Requested item quantity:" + requestedQuantity);
             // console.log("--------------------------------------------");
@@ -48,30 +54,35 @@ function start() {
                 var stockQuantity = parseInt(results[requestedID - 1].stock_quantity);
                 var stockPrice = parseFloat(results[requestedID - 1].price);
                 var subtotal = requestedQuantity * stockPrice;
+                var stockSales = parseFloat(results[requestedID - 1].product_sales)
 
-                if (parseInt(requestedID) === stockID && requestedQuantity < stockQuantity) {
+                if (requestedID === stockID && requestedQuantity < stockQuantity) {
                     console.log("We have enough of the desired item in stock!!");
-                    // console.log("Stock item ID: " + stockID);
-                    // console.log("Stock item quantity:" + stockQuantity);
-                    // console.log("Stock price:" + stockPrice);
+                    console.log("Stock item ID: " + stockID);
+                    console.log("Stock item quantity:" + stockQuantity);
+                    console.log("Stock price:" + stockPrice);
+                    console.log(requestedQuantity);
+                    console.log(requestedID);
                     // console.log("--------------------------------------------");
                     connection.query(
                         "UPDATE products SET ? WHERE ?", [{
-                                stock_quantity: stockQuantity - requestedQuantity
+                                stock_quantity: stockQuantity - requestedQuantity,
+                                product_sales: stockSales + subtotal
+
                             },
                             {
                                 item_id: requestedID
                             }
                         ],
-                        function(error) {
-                            if (error) throw err;
+                        function(err) {
+                            if (err) throw err;
                             // console.log("Stock item ID: " + stockID);
                             // console.log("Stock item quantity:" + stockQuantity);
                             // console.log("Stock price:" + stockPrice);
                             // console.log("--------------------------------------------");
                         }
                     );
-                    console.log("Total cost: " + subtotal);
+                    // console.log("Total cost: " + subtotal);
                     console.log("--------------------------------------------");
 
                 } else {
