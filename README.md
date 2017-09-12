@@ -3,11 +3,11 @@
 The ojective is to use Node.js and MySQL to create an Amazon-like store front application. 
 
 ## Getting Started
-Clone Repo
+Clone Repo.
 -Open terminal/command prompt
 -Type the following commands: git clone https://github.com/bennyficial/bamazon.git
 
-Install Packages
+Install Packages.
 -Type the following commands within terminal/command prompt: npm install
 
 ### Setting up the Database
