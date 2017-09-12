@@ -77,7 +77,7 @@ Supervisor View- Allow for a supervisor to view the profitablity of all departme
 ### Workflows
 1. `bamazonCustomer.js`
 User will first be shown a list of the available products for sale
-![Product List](cust1.png?raw=true)
+![Product List](/cust1.PNG?raw=true)
 
 User will then enter the ID of the product they wish to purchase
 ![Item ID](/images/cust2.png?raw=true)
