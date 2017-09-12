@@ -89,7 +89,7 @@ User will first be shown a list of the available products for sale
     * User is then shown the total cost of their purchase
 
     * if there is not enough inventory  
-    ![Alt QtyF](/images/cust3.PNG?raw=true)
+    ![Alt QtyF](/images/cust4.PNG?raw=true)
 
 ## Technologies used
 - Node.js
