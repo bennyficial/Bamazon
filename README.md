@@ -82,11 +82,13 @@ User will first be shown a list of the available products for sale
 User will then enter the ID of the product they wish to purchase
 ![Item ID](/images/cust2.PNG?raw=true)
 
-User will then enter the amount of the product they wish to purchase and if there is sufficient inventory
+User will then enter the amount of the product they wish to purchase and ...
+
+if there is sufficient inventory
 ![Item QtyT](/images/cust3.PNG?raw=true)
 User is then shown the total cost of their purchase
 
-If there is not enough inventory
+if there is not enough inventory
 ![Alt QtyF](/images/cust3.PNG?raw=true)
 
 ## Technologies used
