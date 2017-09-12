@@ -2,11 +2,18 @@
 
 The objective is to use Node.js and MySQL to create an Amazon-like store front application. 
 
+This application should should have 3 different views: Customer, Manager, and Supervisor.
+
+Customer View- Take in a customer's order and deplete the stock's inventory. 
+
+Manager View- Allow for a manager to view all products for sale, view products with low inventory, add more inventory to existing products on sale, add new products for sale. 
+
+Supervisor View- Allow for a supervisor to view the profitablity of all departments as well as adding new departments. 
+
 ## Getting Started
 
-- Clone repo.
-- Run command in Terminal or Gitbash 'npm install'
 - Run command in Terminal or Gitbash 'git clone https://github.com/bennyficial/bamazon.git'
+- Run command in Terminal or Gitbash 'npm install'
 
 ### Setting up the Database
 1. Open mySQL and connect to an existing local server or create a new one with the following values:
@@ -67,6 +74,20 @@ The objective is to use Node.js and MySQL to create an Amazon-like store front a
 
     * If the supervisor selects `Create New Department`, it allows the manager to create a new department and input current overhead costs and product sales. If there are none, by default it will set at 0.        
 
+### Workflows
+1. `bamazonCustomer.js`
+User will first be shown a list of the available products for sale
+![Alt text](images/cust1.png?raw=true)
+
+User will then enter the ID of the product they wish to purchase
+![Alt text](images/cust2.png?raw=true)
+
+User will then enter the amount of the product they wish to purchase and if there is sufficient inventory
+![Alt text](images/cust3.png?raw=true)
+User is then shown the total cost of their purchase
+
+If there is not enough inventory
+![Alt text](images/cust3.png?raw=true)
 
 ## Technologies used
 - Node.js

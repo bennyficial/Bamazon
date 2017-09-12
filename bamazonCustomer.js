@@ -14,10 +14,24 @@ var connection = mysql.createConnection({
 connection.connect(function(err) {
     if (err) throw err;
     // run the start function after the connection is made to prompt the user
-    start();
+    viewProducts();
 });
 
-function start() {
+
+function viewProducts() {
+    var query = "SELECT * FROM products";
+    connection.query(query,
+        function(err, res) {
+            if (err) throw err;
+            for (var i = 0; i < res.length; i++) {
+                console.log("ID: " + res[i].item_id + " || Product: " + res[i].product_name + " || Department: " + res[i].department_name + " || Price: " + res[i].price + " || Quantity: " + res[i].stock_quantity);
+            }
+            console.log("---------------------------------------------")
+            purchase();
+        });
+} 
+
+function purchase() {
     inquirer
         .prompt([{
             name: "itemID",
@@ -58,11 +72,11 @@ function start() {
 
                 if (requestedID === stockID && requestedQuantity < stockQuantity) {
                     console.log("We have enough of the desired item in stock!!");
-                    console.log("Stock item ID: " + stockID);
-                    console.log("Stock item quantity:" + stockQuantity);
-                    console.log("Stock price:" + stockPrice);
-                    console.log(requestedQuantity);
-                    console.log(requestedID);
+                    // console.log("Stock item ID: " + stockID);
+                    // console.log("Stock item quantity:" + stockQuantity);
+                    console.log("Unit price:" + stockPrice);
+                    console.log("Unit quantity: " + requestedQuantity);
+                    // console.log(requestedID);
                     // console.log("--------------------------------------------");
                     connection.query(
                         "UPDATE products SET ? WHERE ?", [{
@@ -82,7 +96,7 @@ function start() {
                             // console.log("--------------------------------------------");
                         }
                     );
-                    // console.log("Total cost: " + subtotal);
+                    console.log("Total cost: " + subtotal);
                     console.log("--------------------------------------------");
 
                 } else {
