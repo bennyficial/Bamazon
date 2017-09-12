@@ -86,7 +86,6 @@ User will first be shown a list of the available products for sale
 
         * if there is sufficient inventory  
         ![Item QtyT](/images/cust3.PNG?raw=true)
-    User is then shown the total cost of their purchase
 
         * if there is not enough inventory  
         ![Alt QtyF](/images/cust4.PNG?raw=true)
@@ -100,15 +99,17 @@ User will first be shown a list of the available actions
 
     * choosing VIEW LOW INVENTORY will show the following 
     ![Low List](/images/man3.PNG?raw=true)
-    User is then shown the total cost of their purchase
 
     * choosing Add INVENTORY will show the following 
     ![Add Item](/images/man4.PNG?raw=true)
-    Then presents the user with a list to choose from
+
+    * Then presents the user with a list to choose from
     ![Add Item List](/images/man4.PNG?raw=true)
-    User uses up and down arrows to navigate and spacebar to select, then enter to submit
+
+    * User uses up and down arrows to navigate and spacebar to select, then enter to submit
     ![Add Item Choice](/images/man5.PNG?raw=true)
-    Prompts user for how many units to add
+    
+    * Prompts user for how many units to add
     ![Add Item Qty](/images/man5.PNG?raw=true)
     User is shown a confirmation that the item was added
 
