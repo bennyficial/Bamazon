@@ -1,17 +1,15 @@
 ### Workflows
 1. `bamazonCustomer.js`
-User will first be shown a list of the available products for sale
+User will first be shown a list of the available products for sale and then be prompted to enter the ID of the product they wish to purchase
 ![Product List](/images/cust1.PNG?raw=true)
 
-    * User will then enter the ID of the product they wish to purchase
+    * User will then enter the amount of the product they wish to purchase
     ![Item ID](/images/cust2.PNG?raw=true)
 
-    * User will then enter the amount of the product they wish to purchase and ...
-
-        * if there is sufficient inventory  
+        * If there is sufficient inventory  
         ![Item QtyT](/images/cust3.PNG?raw=true)
 
-        * if there is not enough inventory  
+        * If there is not enough inventory  
         ![Alt QtyF](/images/cust4.PNG?raw=true)
 
 2. `bamazonManager.js`
@@ -30,7 +28,7 @@ User will first be shown a list of the available actions
     * User uses up and down arrows to navigate and spacebar to select item, then enter to submit
     ![Add Stock List](/images/man5.PNG?raw=true)
 
-    * User enters how many units they wish to add
+    * User specifies how many units they wish to add
     ![Add Stock Qty](/images/man6.PNG?raw=true)
 
     * User gets a confirmation of the stock being updated
@@ -58,7 +56,7 @@ User will first be shown a list of the available actions
     * Choosing VIEW PRODUCT SALES BY DEPARTMENT will show the following
     ![Product List](/images/sup2.PNG?raw=true)
 
-    * Choosing CREATE NEW DEPARTENT will prompt the user for the name of the new department
+    * Choosing CREATE NEW DEPARMTENT will prompt the user for the name of the new department
     ![Product List](/images/sup3.PNG?raw=true)  
 
     * User will then be specify the overhead cost of the new department
