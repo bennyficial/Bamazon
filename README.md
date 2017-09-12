@@ -79,17 +79,17 @@ Supervisor View- Allow for a supervisor to view the profitablity of all departme
 User will first be shown a list of the available products for sale
 ![Product List](/images/cust1.PNG?raw=true)
 
-User will then enter the ID of the product they wish to purchase
-![Item ID](/images/cust2.PNG?raw=true)
+    * User will then enter the ID of the product they wish to purchase
+    * ![Item ID](/images/cust2.PNG?raw=true)
 
-User will then enter the amount of the product they wish to purchase and ...
+    * User will then enter the amount of the product they wish to purchase and ...
 
-if there is sufficient inventory  
-![Item QtyT](/images/cust3.PNG?raw=true)
-User is then shown the total cost of their purchase
+    * if there is sufficient inventory  
+    * ![Item QtyT](/images/cust3.PNG?raw=true)
+    * User is then shown the total cost of their purchase
 
-if there is not enough inventory  
-![Alt QtyF](/images/cust3.PNG?raw=true)
+    * if there is not enough inventory  
+    * ![Alt QtyF](/images/cust3.PNG?raw=true)
 
 ## Technologies used
 - Node.js
