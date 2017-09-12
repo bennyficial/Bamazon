@@ -84,11 +84,11 @@ User will then enter the ID of the product they wish to purchase
 
 User will then enter the amount of the product they wish to purchase and ...
 
-if there is sufficient inventory
+if there is sufficient inventory  
 ![Item QtyT](/images/cust3.PNG?raw=true)
 User is then shown the total cost of their purchase
 
-if there is not enough inventory
+if there is not enough inventory  
 ![Alt QtyF](/images/cust3.PNG?raw=true)
 
 ## Technologies used
