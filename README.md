@@ -80,7 +80,7 @@ User will first be shown a list of the available products for sale
 ![Product List](/cust1.PNG?raw=true)
 
 User will then enter the ID of the product they wish to purchase
-![Item ID](/images/cust2.png?raw=true)
+![Item ID](/images/cust2.PNG?raw=true)
 
 User will then enter the amount of the product they wish to purchase and if there is sufficient inventory
 ![Item QtyT](/images/cust3.png?raw=true)
