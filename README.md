@@ -77,17 +77,17 @@ Supervisor View- Allow for a supervisor to view the profitablity of all departme
 ### Workflows
 1. `bamazonCustomer.js`
 User will first be shown a list of the available products for sale
-![Alt text](images/cust1.png?raw=true)
+![Product List](/images/cust1.png?raw=true)
 
 User will then enter the ID of the product they wish to purchase
-![Alt text](images/cust2.png?raw=true)
+![Item ID](/images/cust2.png?raw=true)
 
 User will then enter the amount of the product they wish to purchase and if there is sufficient inventory
-![Alt text](images/cust3.png?raw=true)
+![Item QtyT](/images/cust3.png?raw=true)
 User is then shown the total cost of their purchase
 
 If there is not enough inventory
-![Alt text](images/cust3.png?raw=true)
+![Alt QtyF](/images/cust3.png?raw=true)
 
 ## Technologies used
 - Node.js
