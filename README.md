@@ -28,7 +28,7 @@ Supervisor View- Allow for a supervisor to view the profitablity of all departme
 
 4. Run the queries from the seeds.sql file within your connection/query tab to populate the tables with sample data
 
-### Testing each app
+### Testing each app (refer to workflow.md for more info)
 - Run the following command in Terminal or Gitbash depending on which "view" or app you would like to run:
 	* Customer - 'node bamazonCustomer.js'
 	* Manager - 'node bamazonManager.js'
