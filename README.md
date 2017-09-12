@@ -84,12 +84,33 @@ User will first be shown a list of the available products for sale
 
     * User will then enter the amount of the product they wish to purchase and ...
 
-    * if there is sufficient inventory  
-    ![Item QtyT](/images/cust3.PNG?raw=true)
-    * User is then shown the total cost of their purchase
+        * if there is sufficient inventory  
+        ![Item QtyT](/images/cust3.PNG?raw=true)
+    User is then shown the total cost of their purchase
 
-    * if there is not enough inventory  
-    ![Alt QtyF](/images/cust4.PNG?raw=true)
+        * if there is not enough inventory  
+        ![Alt QtyF](/images/cust4.PNG?raw=true)
+
+2. `bamazonManager.js`
+User will first be shown a list of the available actions
+![Manager List](/images/man1.PNG?raw=true)
+
+    * choosing VIEW PRODUCTS FOR SALE will show the following
+    ![Product List](/images/man2.PNG?raw=true)
+
+    * choosing VIEW LOW INVENTORY will show the following 
+    ![Low List](/images/man3.PNG?raw=true)
+    User is then shown the total cost of their purchase
+
+    * choosing Add INVENTORY will show the following 
+    ![Add Item](/images/man4.PNG?raw=true)
+    Then presents the user with a list to choose from
+    ![Add Item List](/images/man4.PNG?raw=true)
+    User uses up and down arrows to navigate and spacebar to select, then enter to submit
+    ![Add Item Choice](/images/man5.PNG?raw=true)
+    Prompts user for how many units to add
+    ![Add Item Qty](/images/man5.PNG?raw=true)
+    User is shown a confirmation that the item was added
 
 ## Technologies used
 - Node.js
